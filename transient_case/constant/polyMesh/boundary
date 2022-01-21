@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+9
+(
+    AMI2_2
+    {
+        type            cyclicAMI;
+        nFaces          908;
+        startFace       429187;
+        matchTolerance  1e-05;
+        transform       noOrdering;
+        neighbourPatch  AMI2_1;
+    }
+
+    Outlet
+    {
+        type            patch;
+        nFaces          582;
+        startFace       430095;
+    }
+
+    Wall_3
+    {
+        type            wall;
+        nFaces          17252;
+        startFace       430677;
+    }
+
+    AMI1_2
+    {
+        type            cyclicAMI;
+        nFaces          487;
+        startFace       447929;
+        matchTolerance  1e-05;
+        transform       noOrdering;
+        neighbourPatch  AMI1_1;
+    }
+
+    AMI2_1
+    {
+        type            cyclicAMI;
+        nFaces          935;
+        startFace       448416;
+        matchTolerance  1e-05;
+        transform       noOrdering;
+        neighbourPatch  AMI2_2;
+    }
+
+    Wall_2
+    {
+        type            wall;
+        nFaces          26498;
+        startFace       449351;
+    }
+
+    Inlet
+    {
+        type            patch;
+        nFaces          1225;
+        startFace       475849;
+    }
+
+    AMI1_1
+    {
+        type            cyclicAMI;
+        nFaces          1191;
+        startFace       477074;
+        matchTolerance  1e-05;
+        transform       noOrdering;
+        neighbourPatch  AMI1_2;
+    }
+
+    Wall_1
+    {
+        type            wall;
+        nFaces          12544;
+        startFace       478265;
+    }
+
+)
+
+
+// ************************************************************************* //
